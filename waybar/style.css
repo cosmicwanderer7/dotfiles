@@ -75,14 +75,14 @@ tooltip {
 
 #backlight {
   border-radius: 10px 0px 0px 10px;
-  border: 1px solid #C3B48F;
+  border: 1.5px solid #C3B48F;
   border-right:none;
 }
 
 #tray {
   border-radius: 10px;
   margin-right: 10px;
-  border: 1px solid #C3B48F;
+  border: 1.5px solid #C3B48F;
 }
 
 #workspaces {
@@ -91,12 +91,12 @@ tooltip {
   margin-left: 10px;
   padding-right: 2px;
   padding-left: 2px;
-  border: 1px solid #C3B48F;
+  border: 1.5px solid #C3B48F;
 }
 
 #window {
   border-radius: 10px;
-  border: 1px solid #C3B48F;
+  border: 1.5px solid #C3B48F;
   margin-left:10px ;
   
 }
@@ -107,7 +107,7 @@ tooltip {
   border-radius: 10px 0px 0px 10px;
   margin-left: 10px;
   border-right: 0px;
-  border: 1px solid #C3B48F;
+  border: 1.5px solid #C3B48F;
   border-right:none;
 }
 
@@ -117,7 +117,7 @@ tooltip {
   margin-left: 10px;
   border-right: 0px;
    padding: 0px 13px 0px 8px;
-   border: 1px solid #C3B48F;
+   border: 1.5px solid #C3B48F;
 }
 #custom-powermenu {
   color: #ff2929;
@@ -126,7 +126,7 @@ tooltip {
   border-left: 1px;
   font-size: 14.2px;
    padding: 0px 13px 0px 12px;
-   border: 1px solid #C3B48F;
+   border: 1.5px solid #C3B48F;
 }
 #network {
   color: #f9e2af;
@@ -143,7 +143,7 @@ tooltip {
 
 #pulseaudio {
   color: #367F91;
-  border: 1px solid #C3B48F;
+  border: 1.5px solid #C3B48F;
   border-left: none;
   border-right: none ;
 }
@@ -160,7 +160,7 @@ tooltip {
   color: #8CE3C7;
   border-radius: 10px 10px 10px 10px;
   margin-right: 10px;
-  border: 1px solid #C3B48F;
+  border: 1.5px solid #C3B48F;
 }
 
 #custom-updates {
@@ -168,7 +168,7 @@ tooltip {
   border-radius: 10px 10px 10px 10px;
   margin-right: 10px;
   border-left: 0px;
-  border: 1px solid #C3B48F;
+  border: 1.5px solid #C3B48F;
 
 }
 
