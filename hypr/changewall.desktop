@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Toggle Script
+Exec=/bin/bash -c "/home/prithvi/.config/hypr/changewall.sh"
+Hidden=true

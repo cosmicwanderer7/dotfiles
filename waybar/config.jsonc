@@ -1,0 +1,153 @@
+{
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "height": 31,
+  "modules-left": [
+    "custom/arch",
+    "hyprland/workspaces",
+    "clock",
+    "custom/weather"
+    
+  ],
+  "modules-center": ["hyprland/window"],
+  "modules-right": [
+    "temperature",
+    "custom/updates",
+    "battery",
+    "backlight",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "tray",
+    "custom/powermenu"
+  ],
+
+  "hyprland/window": {
+    "format": "{}",
+    "max-length": 70
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll": false,
+    "all-outputs": true,
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "format_focused": "< %g ● >",
+    "format-icons": {
+      "1": "󰲠",
+      "2": "󰲢",
+      "3": "󰲤",
+      "4": "󰲦",
+      "5": "󰲨",
+      "6": "󰲪",
+      "7": "󰲬",
+      "8": "󰲮",
+      "9": "󰲰",
+      "10": "󰿬",
+      "default": "",
+      "urgent": "",
+      "focused": ""
+    }
+  },
+
+  "custom/weather": {
+    //shows the current weather and forecast
+    "tooltip": true,
+    "format": "{}",
+    "interval": 30,
+    "exec": "~/.config/waybar/scripts/waybar-wttr.py",
+    "return-type": "json"
+  },
+
+  "tray": {
+    "icon-size": 19,
+    "spacing": 10
+  },
+
+  "clock": {
+    "format": "{:  %I:%M %p    %a, %b%e}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "backlight": {
+    "device": "amd_backlight",
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"],
+    "on-scroll-up": "brightnessctl set 2%+",
+    "on-scroll-down": "brightnessctl set 2%-",
+    "min-length": 6
+  },
+
+  "custom/updates": {
+    "exec": "(pacman -Qu ; yay -Qua) | wc -l",
+    "on-click": "(pacman -Qu ; yay -Qua) | wc -l",
+    "interval": 7200,
+    "format": "󰚰 {}"
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄 {capacity}%",
+    "format-alt": "{time} {icon}",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "tooltip": false,
+    "format-muted": " Muted",
+    "on-click": "pamixer -t",
+    "on-scroll-up": "pamixer -i 5",
+    "on-scroll-down": "pamixer -d 5",
+    "scroll-step": 5,
+    "on-click-right": "pavucontrol",
+    "ignored-sinks": ["Easy Effects Sink"],
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    }
+  },
+
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": " {volume}%",
+    "format-source-muted": " Muted",
+    "on-click": "pamixer --default-source -t",
+    "on-scroll-up": "pamixer --default-source -i 5",
+    "on-scroll-down": "pamixer --default-source -d 5",
+    "ignored-sinks": ["Easy Effects Sink"],
+    "scroll-step": 5
+  },
+
+  "temperature": {
+    "thermal-zone": 1,
+    "format": "{temperatureF}°F ",
+    "critical-threshold": 80,
+    "format-critical": "{temperatureC}°C "
+  },
+  "custom/arch": {
+    "format": "",
+    "on-click": "exec /home/prithvi/.config/rofi/launchers/type-3/launcher.sh",
+    "tooltip": false
+  },
+  "custom/powermenu": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": false
+  }
+}
