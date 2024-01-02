@@ -1,0 +1,36 @@
+{
+    "label" : "lock",
+    "action" : "swaylock --grace 0",
+    "text" : "Lock",
+    "keybind" : "l"
+}
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "Reboot",
+    "keybind" : "r"
+}
+{
+    "label" : "shutdown",
+    "action" : "/home/prithvi/.local/bin/poweroffdisk.sh",
+    "text" : "Shutdown",
+    "keybind" : "s"
+}
+{
+    "label" : "logout",
+    "action" : "hyprctl dispatch exit 0",
+    "text" : "Logout",
+    "keybind" : "o"
+}
+{
+    "label" : "suspend",
+    "action" : "systemctl suspend",
+    "text" : "Suspend",
+    "keybind" : "u"
+}
+{
+    "label" : "windows",
+    "action" : "systemctl reboot --boot-loader-entry=auto-windows",
+    "text" : "Windows",
+    "keybind" : "w"
+}
